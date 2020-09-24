@@ -1,0 +1,18 @@
+from tkinter import *
+root=Tk()
+root.title("COVID-19 Seoul")
+root.geometry("800x600")
+
+photo=PhotoImage(file="마포.png")
+label1=Label(root, image=photo)
+label1.pack()
+
+def change():
+    global photo1
+    photo1=PhotoImage(file="마포구 그래프.png")
+    label1.config(image=photo1)
+
+btn=Button(root, text="마포구", command=change)
+btn.pack()
+
+root.mainloop()
